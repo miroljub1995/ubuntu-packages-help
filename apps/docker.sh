@@ -17,5 +17,5 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo gpasswd -a $USER docker
-newgrp docker
-docker run hello-world
+sudo docker run hello-world
+echo "Restart if you want to use without sudo!!!"
