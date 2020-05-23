@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 # Set up the Docker daemon
 sudo cat > /etc/docker/daemon.json <<EOF
 {
