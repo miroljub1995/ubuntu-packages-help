@@ -15,7 +15,7 @@ sudo add-apt-repository \
    bionic \
    stable"
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo gpasswd -a $USER docker
 sudo docker run hello-world
 echo "Restart if you want to use without sudo!!!"
