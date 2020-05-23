@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Set up the Docker daemon
+echo "Settin up the Docker daemon"
 cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
@@ -13,8 +13,10 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 
+echo "Making /etc/systemd/system/docker.service.d dir"
 mkdir -p /etc/systemd/system/docker.service.d
 
-# Restart Docker
+echo "Restartin Docker"
 systemctl daemon-reload
 systemctl restart docker
+echo "Done"
