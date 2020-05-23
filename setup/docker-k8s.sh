@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Settin up the Docker daemon"
+echo "Settin up the Docker daemon, need access to /etc/docker/daemon.json"
 cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
