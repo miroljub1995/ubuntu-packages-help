@@ -16,7 +16,7 @@ EOF
 echo "Making /etc/systemd/system/docker.service.d dir"
 mkdir -p /etc/systemd/system/docker.service.d
 
-echo "Restartin Docker"
+echo "Restarting Docker"
 systemctl daemon-reload
 systemctl restart docker
 echo "Done"
